@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nail_id: 1
+  plate_id: 1
+  design_num: 1
+
+two:
+  nail_id: 1
+  plate_id: 1
+  design_num: 1

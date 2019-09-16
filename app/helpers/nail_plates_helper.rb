@@ -1,0 +1,2 @@
+module NailPlatesHelper
+end

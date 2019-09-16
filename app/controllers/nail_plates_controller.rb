@@ -1,0 +1,2 @@
+class NailPlatesController < ApplicationController
+end
