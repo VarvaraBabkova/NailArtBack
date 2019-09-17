@@ -14,7 +14,7 @@ Plate.destroy_all
 NailPolish.destroy_all
 NailPlate.destroy_all
 
-user1 = User.create(name: "Varvara")
+user1 = User.create(username: "Varvara", password:"12345")
 
 project1 = Project.create(name: "Simple", user_id: user1.id)
 
@@ -46,14 +46,13 @@ polish6 = Polish.create(collection: "Scotland Autumn 2019", name: "Boys Be Thist
 
 
 NailPolish.create(nail_id: left_pinky.id, polish_id: polish1.id)
-NailPolish.create(nail_id: left_pinky.id, polish_id: polish2.id)
 
 NailPlate.create(nail_id: left_pinky.id, plate_id: plate1.id, design_num: 0)
 
 
 NailPolish.create(nail_id: left_ring.id, polish_id: polish3.id)
 NailPolish.create(nail_id: left_middle.id, polish_id: polish4.id)
-NailPolish.create(nail_id: left_index.id, polish_id: polish1.id)
+NailPolish.create(nail_id: left_index.id, polish_id: polish12.id)
 NailPolish.create(nail_id: left_thumb.id, polish_id: polish2.id)
 
 
