@@ -14,9 +14,11 @@ Plate.destroy_all
 NailPolish.destroy_all
 NailPlate.destroy_all
 
-user1 = User.create(username: "Varvara", password:"12345")
+user1 = User.create(username: "admin", password:"qqq")
 
 project1 = Project.create(name: "Simple", user_id: user1.id)
+#project2 = Project.create(name: "Second", user_id: user1.id)
+
 
 left_pinky = Nail.create(name: "left_pinky", project_id: project1.id, texture: "naked.png")
 left_ring = Nail.create(name: "left_ring", project_id: project1.id, texture: "naked.png")

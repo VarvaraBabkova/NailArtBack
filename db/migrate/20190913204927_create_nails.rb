@@ -4,6 +4,7 @@ class CreateNails < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :project_id
       t.string :texture
+      t.binary :texture_blob
       t.timestamps
     end
   end

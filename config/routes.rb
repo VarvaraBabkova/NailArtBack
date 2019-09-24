@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   # resources :nail_plates
   resources :polishes, only: [:index]
   resources :plates, only: [:index]
-  resources :nails, only: [:index]
-  # resources :projects
-  resources :users, only: [:create]
+  resources :nails, only: [:index, :show, :create]
+  resources :projects, only: [:show, :create]
+  resources :users, only: [:create, :show]
   post "/login", to: "auths#create"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

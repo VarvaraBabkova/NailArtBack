@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_210026) do
     t.string "name"
     t.integer "project_id"
     t.string "texture"
+    t.binary "texture_blob"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
