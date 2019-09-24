@@ -14,9 +14,14 @@ class NailsController < ApplicationController
 	end
 
 	def create
-#byebug
 		nail = Nail.new(nail_params)
 		nail.save
+		render json: nail
+	end
+
+	def update
+		nail = Nail.find(params[:id])
+		nail.update(nail_params)
 		render json: nail
 	end
 

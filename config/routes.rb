@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # resources :nail_plates
   resources :polishes, only: [:index]
   resources :plates, only: [:index]
-  resources :nails, only: [:index, :show, :create]
+  resources :nails
   resources :projects, only: [:show, :create]
   resources :users, only: [:create, :show]
   post "/login", to: "auths#create"
