@@ -16,7 +16,8 @@ NailPlate.destroy_all
 
 user1 = User.create(username: "admin", password:"qqq")
 
-project1 = Project.create(name: "Simple", user_id: user1.id)
+project1 = Project.create(name: "Simple", user_id: user1.id, 
+	img: "https://photos.google.com/photo/AF1QipPRHk_zsVMs-IRayL8-Pn8VVPuOKZIN_atIjCnD")
 #project2 = Project.create(name: "Second", user_id: user1.id)
 
 

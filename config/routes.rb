@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :polishes, only: [:index]
   resources :plates, only: [:index]
   resources :nails
-  resources :projects, only: [:show, :create]
+  resources :projects
   resources :users, only: [:create, :show]
   post "/login", to: "auths#create"
 

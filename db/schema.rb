@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_210026) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
