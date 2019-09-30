@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+img_height = 375
+img_width = 153
+
 
 User.destroy_all
 Project.destroy_all
@@ -16,9 +19,10 @@ NailPlate.destroy_all
 
 user1 = User.create(username: "admin", password:"qqq")
 
-project1 = Project.create(name: "Simple", user_id: user1.id, 
-	img: "https://photos.google.com/photo/AF1QipPRHk_zsVMs-IRayL8-Pn8VVPuOKZIN_atIjCnD")
-#project2 = Project.create(name: "Second", user_id: user1.id)
+project1 = Project.create(name: "Orange Black", user_id: user1.id, 
+	img: "https://lh3.googleusercontent.com/MlMszsOPc3aqJZLgBiFDUqfZXdO1O_GbU1teahVMKq4URx0UbC8zAuKf3Q_Q-2alWvVth73ceMd7FoPwtyoKjZjYylbteSnD_BNJyDbKZCReaHzM19lDBKdl-9zTWe19eP8tnFHrlLNoCOhuzFY0WUg8EfhJ2ioXhenrdbww2nAhvz-gp_eSjE4cVrp8KUOHRy9zNGqMTKYQ-q-f4165R6k3GRlxgV7f9HPTS4W4VJu9oDGvXcbUrh3-IM-7WwELZpxdidZ-bImwpEx5sXcnQjKqU3Xm9vwygklZWddHuhifY2Merbn-lTtIRjD6b6Ui5ATqU-__qinOfNlLHpx9mxcCf17YN98rdBTyKnERa4qN_JQII_hgr_4Y0NMuEtdDvZjCd_WpHanqmcGr3iIv6wq8EVXE9K6_khv9NHmAI1J_vzd7YUFQFcTZfjYXlrnETAjmB-9qsAf9916F6IkWwkM6Ly8QE93HMi5ZSF6J34lnSUKGpIh3rehVOg-J2d0JcIBsM8ImMmQnvoK6I5w0SDSB0z7u7v_o-CwYgzj5gAcRfbMCXfqUfNZkPgI14ldbPYJ9NeROcAA5_3iP1TWDDmdjMhrIogqoYVhc75HVxZsnXjmvBewNTawmfFcr9yIIrQm5Z_hcE1YQ41L8gMeUnhhAWNsrrWg7LvdlBUvmRxGndpBUc5z7cyU=w1050-h1400-no")
+project2 = Project.create(name: "Purple", user_id: user1.id, 
+	img: "https://lh3.googleusercontent.com/VhYKF8n21TSWbXeowT6NjfRP6_cP9Sa0rgIU5A7Ag3IBDQWqjx1iFQvO4HEvFUGJpD1vskLfGO_6xYqME5GUUjKd4VXxyVpIEGyEAFkKlqar-WEWcx3kKqUCF0KMXB2LFZ9EIe90inPxx-Fe2LG-Po3yB4G8eGlnB5BcBDbBktb6ywTuVA7cb98baMcvKg1XSL4j4RkxVpaESZLJ2so0oMF8X8c6dELYBKJkWWNw9RqLsI4mevXpyp3QV51b0iXSHYHyry71fjfdyjOD4jczl7WBApyp75OCcuLP37zIZ4lDrxmNGuVqbeojnqbDjneaex2vMWEdpx-McBHbqmsksZujha4nggI8LyHCT9mjB7nZlfLj1UVMI08K5YgL1ExAGg5Ar2IkNN77aAjHDBFRh5kXlKz96xGwx56eb_c3QcTmTiKRiaBhw0pt9Kp_xziBSRxKXegPkw0HFNH_MKZ7ftUmnMqKk-wwrhW7nJDyznDh-AcYQmuSDRa_3EsVfI3KdGS4d6pWhTdwtpdAEGZ6pdP1eQsr1kj9v1F-iwkMdSa8i9f2Ie4SDTw1VWPLCFLtV9gs_-bH2j1ifBHlV-i9VD79WDiMTwNgUVaS7Y9W3xrYobMkY-r8wT7rJeLEjg8NYvNkdy9xvPcd4BEAnP1bc6c0_x7DVJ43mz4jF-K6uiABC-6Q2ekEhHM=w1066-h1420-no")
 
 
 left_pinky = Nail.create(name: "left_pinky", project_id: project1.id, texture: "naked.png")
@@ -27,24 +31,78 @@ left_middle = Nail.create(name: "left_middle", project_id: project1.id, texture:
 left_index = Nail.create(name: "left_index", project_id: project1.id, texture: "naked.png")
 left_thumb = Nail.create(name: "left_thumb", project_id: project1.id, texture: "naked.png")
 
+left_pinky2 = Nail.create(name: "left_pinky", project_id: project2.id, texture: "naked.png")
+left_ring2 = Nail.create(name: "left_ring", project_id: project2.id, texture: "naked.png")
+left_middle2 = Nail.create(name: "left_middle", project_id: project2.id, texture: "naked.png")
+left_index2 = Nail.create(name: "left_index", project_id: project2.id, texture: "naked.png")
+left_thumb2 = Nail.create(name: "left_thumb", project_id: project2.id, texture: "naked.png")
 
 
-plate1 = Plate.create(collection_name: "Trend Hunter Collection", number: 23, img: "trend_hunter_23.png")
+plate1 = Plate.create(collection_name: "Henna Collection", number: 11, 
+	img: "https://lh3.googleusercontent.com/bcOIrnuK1hFbRWBq7s0dXMMTPaI5ra_U236cezXqLJn0a4LSagJajjrXy3epLmpkWcx68BVfsJuTeSDoGyOumSE-gOYwKxxQXFbyZkqt_rZALaAQFZ1jAXVXmoDIJDO3RN5IIoS8mA_UmfvgGRCQ0bAnZ_d8AlKEQPpphiBQCnrs1VeT4KF1rJhlM2f3VrHW0qNAeYF9BDov7aPH0pWhHvFU8IdAMIIhbPPmwks_aAYFjXijsv5O429Tnddn1XJA-OxrMkXiaSMYw0Dz8Z-6cKbTi83hqel-sKCOsNzdyG4sYZuJejkoy3y-p_aG8vBEvMsN6QDPFyEutwrJG_bMLO9GtEdJgJJZsPyp_Bl6-j7_Lxe0W1sMx_Ddp_BySrR5QtXveR0ItthknNSXT87W3EibTciN4j-MQYg--3ZgkGkew4D_13oZheuqOpHYJDupgznGQPAfaqWn9M4bBCXHuFc9JwHn5dm7HNbo5Noj_CizxRnfiNEdf-k0TlFkCribbTGN2Qhidj13VMQf3j6_aMp26k0zOfIeNqujO-LOa9bcLNENN_clKgIL5BZqXDkSZOXpiVEJefx_VrDk6tDcDkXdrSWSWwkI7dEg4UKHdHOmMFl_4mVATC0hWeWNF_pgl3masQ3HSI2QZVhY4PXn90HWIC4GkYKJqBDVAsOQK3qedpws1JusjQo=s1420-no")
+plate2 = Plate.create(collection_name: "Helloween Collection", number: 01, 
+	img: "https://lh3.googleusercontent.com/mj3WCyM_OywNbk9u7jPBV98v-pIrYfycMfCswIdi3Z0VlbKudKHF6HlWnpudZeRPsidl27_loMDYfNnT9i3NVTian7m7LZoRTGNNcFBsHQuDxkDaXtR4lcjkxymOiJf2aSCLg5vBz9l860dMlF0PyCWYM9JRRfEF-DjWn6OatwMujyU767J_cB5IVHZgbr16v5p98HuaS392-HtQYTb0wafM2dD8jrjeEHNo8zH9fj9kAErvYmcUeQnjkSEaiM66XtS7jG2qWVVJWdyJolMfcUAaDq0nerHJ7SeacC3c7_VShmTZFbj0QOcrDFZVToocUGyZAhhcmFPINAPZ3F7_9w-Ays1ydahJJG3PvbUbJQ-M9DrvQSCOQHXyAG_RQO9XzmV7XvGbX2DUfhXREBkbjUk6lcD5LFHEen6kb3gbnNOW5CMa8uhCiJAPDAu1Kma9hxBQ5PCbfJaeU3lf-W0CtVATTAAn8Mj1-0N6eC8pYPbTFMw_mdWKaq70Kba_eUq1aT5NwuI_G8Tpt9ZkzF-CHpwy0ZAxwr4_V4Osj7O3jLidgHan0U3VQ_ab1IV6lsj2zBhiBZrTpEMCnxf04ib2F98ZF-8p9IF4WaWjp4oDwJgHc5tlm1tT9UdYhIgioG3BI5vc3RoNU2bQgrRPdL5UAuJP-KggmtHMtO34MHfYl21pZtv3CW0Bb1w=s1322-no")
+plate3 = Plate.create(collection_name: "Trend Hunter Collection", number: 24, 
+	img: "https://lh3.googleusercontent.com/08Dez55w06vNhF1M41IMx1d7SWkHG-QDsv2XO6O7kFhZEwChEGKfIGhAmp2_7pl9p1a5A_VhEJO44CPwTXDv9F4yZVNOkJN0VHpgRiK9yuuDvlgXY69NfzGj99LiJsJUge-kAEP3T6UIrcSzoz38lqzHa7zDxHixlUGK3x5DYTUJypaCU9cUZ8vvVV9E5cougyuIg-ervUTZTsGisp02f7z-WdocLmSMUFkrRuo60L3D44uB60WPHBT-nYBr-47m5v9fo8-unUjANTu_G_ttmBcuhn9Fd8OciehGamM1JE4tyClEZG0C2Ik3VF6m-hp3gzKMhjflFrlWxEeL7yPHnPwUPTcKMzDFQojNyK-nHwEk-rAHEr1uPmzCXtVlrVJG_Sk3_mNDdG9tIX0p6eyeh0JT7ol8LvhAmLrsVSqZE-O8ioLkw5d5NxwBid_7PK2tZUQab-K-ykQ1nCqGVmiTzlum_WGReBIuEvoJbrGt02wLccSR8gEa1Vf0Vbo6fcSR-wrGYyl1s61X0Ql2y99ZcyLvdyDCwsoWRexWmxuO6lLuk7Q6M91woF01KszYVfPRAV2lYLvtmtPl8VCW1Z-a9LHsgPh2J4hc6F4ij25VRAJYrwzqJ_ROsvdIzk-KK0qnU482wUc-AQRJFWt2JZklr4EW9aQCf0M1WAKkvlyQGj9t5HNCAiivyT4=s1322-no")
+plate4 = Plate.create(collection_name: "Trend Hunter Collection", number: 23, 
+	img: "https://lh3.googleusercontent.com/IewERceOWAwYRiVOKnN73m2J0xLXwpDZNsLtXSFuwwUZDY35ALlZtM9eSI-JehdXTqTZgaYxwCORGPIv5tNPDX0rIL2AvTGZmGNJD9_F6euRBBxY6bDr_o_yaYJeHQmxnz8aWXezlLL3OPsjk-YXvEwEQYSQDgbUBfJumrmKfq67-Xn7GdINWNCVnTG66NabT8FSTBZ4zwr9OOeSodAp_sunQKmIVQLKt4yeCMRKlB06UYLriD2rY5vtP8dm2oVryN1cs2UCa4tovDKvgNewPHmLwKRzVCLr8WtXxZfYnJtzvocopIINzP8FCk8OzXH0zjM3wFGxF4k8mdzQnOWh_1GPxVMWi3fn58Rqa_U2dELxbt1V8RBmCO9h6Igr-il5KxIhQFVnDV9Axhir6dfG8J2eHeRVXzY3paFsGqVwxnXnQESFyIHvesFAO_fw6jrJh8sg5giYbZwoSYJ0TIAUVF_n2VF1jcIxDfKi8FQSERft83m8gkb9PnlKuCR53tuwlLmojolNM-l3UMvS2PD-8KestkJuu8FMFZmZqJvgMRBJ84Fhum3x7GXMP2xRH1r9MN10OrU57Uza44fJtrs8hNQBXQWPUT42-ObQWC20ciZNLvcMN8tv_MRKT1ZJTRnAsohNzfw5ta394-qw5pWLrojO5QlqwMEiTWf-IfdJY4mBE7L0ymiW0Jo=s1322-no")
+plate5 = Plate.create(collection_name: "Hipster Collection", number: 25, 
+	img: "https://lh3.googleusercontent.com/o51R5bKYk96aagRra7bzrKwfob5qVx8rHMo3n6aX2Y5cQMZl63Er4Sjo_5xJ_ZN1jvPmtFypuYrShEi2ZUj2uC28VlDGGmat-M2xOxcnAYbQ3R3cyaMs8aRxFkSzpL3DsmLm4toGAbsAi806g8urrC1CM3tGerXVCnBOCcu8igYE-P1NMBwtSbznTEJjg3EecYTwTERZA4MnvP7WjkkYefxQZZB_TcZvW-qgJ-m1csy5mnDR1WRSqbh6wP1ZwYWGiXzHLTWx-YyQldzp4g2hhNBc61eGUjCsqrw7npTk-7KmIPcJRcwrPQg0yUcAEbckFhCSTbsDHFZ_ng0MPCzXqrwMbsJeakgAkqV5GUIqJDgZpNS9DKGOlv4kOwmGfmVZ9YYBpG78B3FCXpRBuQq8sV4ukRNWni9gmN7MokF1imvZpxD27-_rMPy7mGP34oW9vaMIZQw0igQnOzrmjiIInhN8my7eSzjzJL37K6Hvab2jIbvgv-YY5B7cyVtz8etgM0ica9grznBKm7Eu5G_y1HM8G7mdVrm0YeMYBbCYPKfLOM0CMx6hElMouzSX1NUgm9oeB7tfrysT6A1__Stf0ykxYiRdoq6_aR_84UWl6kbLiRSEQpoqAa4ZBOBRsCUc34c8yAm-opaX0Pak7jMXqjypRYyIMnBWBsxBYevvUc_6lZCkGAnG-LY=s1322-no")
 
-polish7 = Polish.create(collection: "Scotland Autumn 2019", name: "A Little Guilt Under the Kilt", red: 158, green: 31, blue: 42)
-polish8 = Polish.create(collection: "Scotland Autumn 2019", name: "Suzi Needs a Loch-Smith", red: 195, green: 78, blue: 47)
-polish9 = Polish.create(collection: "Scotland Autumn 2019", name: "Rub-a-Pub-Pub", red: 40, green: 41, blue: 52)
-polish10 = Polish.create(collection: "Scotland Autumn 2019", name: "Nessie Plays Hide & Sea-k", red: 38, green: 93, blue: 158)
-polish11 = Polish.create(collection: "Scotland Autumn 2019", name: "Nice Set of Pipes", red: 43, green: 43, blue: 76)
-polish12 = Polish.create(collection: "Scotland Autumn 2019", name: "Things I've Seen in Aber-green", red: 46, green: 55, blue: 57)
 
 
-polish1 = Polish.create(collection: "Scotland Autumn 2019", name: "Red Heads Ahead", red: 179, green: 50, blue: 59)
-polish2 = Polish.create(collection: "Scotland Autumn 2019", name: "OPI Grabs the Unicorn by the Horn", red: 47, green: 114, blue: 143)
-polish3 = Polish.create(collection: "Scotland Autumn 2019", name: "Edinburgh-er & Tatties", red: 192, green: 150, blue: 144)
-polish4 = Polish.create(collection: "Scotland Autumn 2019", name: "You've Got that Glas-glow", red: 184, green: 151, blue: 159)
-polish5 = Polish.create(collection: "Scotland Autumn 2019", name: "Good Girls Gone Plaid", red: 39, green: 27, blue: 36)
-polish6 = Polish.create(collection: "Scotland Autumn 2019", name: "Boys Be Thistleing at Me", red: 78, green: 33, blue: 60)
+polish7 = Polish.create(collection: "Scotland Autumn 2019", name: "A Little Guilt Under the Kilt", 
+	img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+	img_height: img_height, img_width: img_width, img_x: 0, img_y: 25,
+	red: 158, green: 31, blue: 42)
+polish8 = Polish.create(collection: "Scotland Autumn 2019", name: "Suzi Needs a Loch-Smith", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 300, img_y:25,
+		red: 195, green: 78, blue: 47)
+
+polish12 = Polish.create(collection: "Scotland Autumn 2019", name: "Things I've Seen in Aber-green", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 450, img_y:25,
+		red: 46, green: 55, blue: 57)
+polish1 = Polish.create(collection: "Scotland Autumn 2019", name: "Red Heads Ahead", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 153, img_y:25,
+		red: 179, green: 50, blue: 59)
+
+polish5 = Polish.create(collection: "Scotland Autumn 2019", name: "Good Girls Gone Plaid", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 600, img_y:25,
+	red: 39, green: 27, blue: 36)
+polish6 = Polish.create(collection: "Scotland Autumn 2019", name: "Boys Be Thistleing at Me", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 750, img_y:25,
+	red: 78, green: 33, blue: 60)
+
+
+polish9 = Polish.create(collection: "Scotland Autumn 2019", name: "Rub-a-Pub-Pub", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+			img_height: img_height, img_width: img_width, img_x: 0, img_y:410,
+	red: 40, green: 41, blue: 52)
+polish10 = Polish.create(collection: "Scotland Autumn 2019", name: "Nessie Plays Hide & Sea-k", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 150, img_y:410,
+	red: 38, green: 93, blue: 158)
+polish11 = Polish.create(collection: "Scotland Autumn 2019", name: "Nice Set of Pipes", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 450, img_y:410,
+	red: 43, green: 43, blue: 76)
+polish2 = Polish.create(collection: "Scotland Autumn 2019", name: "OPI Grabs the Unicorn by the Horn", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+			img_height: 360, img_width: img_width, img_x: 300, img_y:410,
+	red: 47, green: 114, blue: 143)
+polish4 = Polish.create(collection: "Scotland Autumn 2019", name: "You've Got that Glas-glow", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 600, img_y:410,
+	red: 184, green: 151, blue: 159)
+polish3 = Polish.create(collection: "Scotland Autumn 2019", name: "Edinburgh-er & Tatties", 
+		img: "https://lh3.googleusercontent.com/lZ_2sZKsBmhd3WwArDUyxH__4cHlkYm5WCXA8wwfBfjMILDqKBGiCyLXKmRSnBXRbq_gTOXAfuDd-bXNvRGZmLm9s_pKE0eXVZ7CaWMlMuNcLqWnRbE2rHRw3KxuUeytEHnGmiF0Bz_0wjAb4nEhWs7NV1krz-T3-O4T4NHgwyJAWScfWU0f4J0vWWjO8cPfFuNnXJOZqFyXJ4llLqECc3lnMHlNJt0X9MZIejSJTHovlnD_O62IzbDe-rMN7W4fNLJ7r99lr3YIGHFPT3TUqKbEkJ1Ci78ukeb5JxpltbF5NLqczXvsPviaL9sdtN8mQxf0s49FsmT__pRKI7M-q0S3jB7kxpF306DePapeu_3Q8xuKlsljlvPCZtRLeJMK6iTrcozHiIfzrkNvz9P37PELNTc1E8dz4azwN7bKfa3SRnaIlXTY4Uj3u3Nu4UjSOtI_X70EQOIFGO67vbRKSs1u8bE5oIORATEAR9EDzPl8AzG4FH7SdP5eDogvztFEnd90v5XUrjuNNYqH5XuyX4L8hpaNVHqKROx9MdVgmuNIJ97qksFKbXugVxvdss-UwKtuG-H3SB9fdd7rCZALkjmlTTS2LvzSrKuKgdIlpVKK5sqsp2oAymELnA72KtfhErm67FeYu5ykPDbBdOHsxrQAFNp1gPhnTXic2nra__Adai6hJkEOKOI=w903-h815-no",
+		img_height: img_height, img_width: img_width, img_x: 750, img_y:410,
+	red: 192, green: 150, blue: 144)
 
 
 

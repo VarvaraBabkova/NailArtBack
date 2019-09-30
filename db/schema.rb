@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(version: 2019_09_13_210026) do
   create_table "polishes", force: :cascade do |t|
     t.string "collection"
     t.string "name"
+    t.string "img"
+    t.integer "img_x"
+    t.integer "img_y"
+    t.integer "img_width"
+    t.integer "img_height"
     t.string "red"
     t.string "blue"
     t.string "green"
